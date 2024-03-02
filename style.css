@@ -1,0 +1,238 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Kode Mono", monospace;
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background: linear-gradient(45deg, #9e25cb 8%, #6312de 100%);
+}
+
+.container {
+    width: 52%;
+    max-width: 450px;
+
+}
+
+.container h1 {
+    color: rgb(220, 206, 180);
+    letter-spacing: 1px;
+    font-weight: 400;
+    text-transform: uppercase;
+    text-align: center;
+    line-height: 2;
+}
+
+.display-container {
+    background-color: rgb(42, 0, 73);
+    border-radius: 1rem;
+    border-bottom: 0.35rem solid rgb(86, 0, 92);
+    padding-top: 0.35rem;
+    position: relative;
+
+}
+
+.display {
+    width: 100%;
+    background-color: transparent;
+    outline: none;
+    border: none;
+    padding: 0.5rem 1rem;
+    color: rgba(255, 255, 0, 0.879);
+    font-weight: 600;
+    font-size: 1.5rem;
+    line-height: 30px;
+    letter-spacing: 1px;
+
+}
+
+.display::placeholder {
+    position: absolute;
+    top: 50%;
+    left: 1.5rem;
+    font-size: 1.5rem;
+    line-height: 30px;
+    opacity: 0.64;
+    text-transform: uppercase;
+    color: rgba(255, 255, 0, 0.431);
+    transform: translateY(-50%);
+}
+
+.display-container button {
+    position: absolute;
+    top: 50%;
+    right: 1.5rem;
+    transform: translateY(-50%);
+}
+
+.input-container {
+    width: 100%;
+    background-color: rgb(42, 0, 73);
+    color: #fff;
+    border-radius: 1rem;
+    padding: 2rem;
+    border-bottom: 0.35rem solid rgb(86, 0, 92);
+    margin-top: 10px;
+}
+
+.length-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.length-container p:nth-child(1) {
+    /* font-weight: 600; */
+    color: wheat;
+    font-size: 1.2rem;
+}
+
+.length-container p:nth-child(2) {
+    font-weight: 600;
+    color: rgb(115, 183, 195);
+    font-size: 1.2rem;
+}
+
+.strength-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 1.3rem 0;
+}
+
+.strength-container p {
+    color: wheat;
+    font-size: 1.2rem;
+}
+
+.indicator {
+    width: 1.5rem;
+    height: 1.5rem;
+    border-radius: 50%;
+    box-shadow: 0px 0px 15px 5px #5f7b23;
+
+    /* background-color: #9e25cb; */
+}
+
+.generate-button {
+    width: 100%;
+    background-color: #a65cbe;
+    padding: 10px 20px;
+    font-size: 20px;
+    letter-spacing: 2px;
+    color: rgba(76, 10, 72, 0.879);
+    border-bottom: 0.35rem solid rgba(203, 161, 37, 0.826);
+    border-radius: 1rem;
+    cursor: pointer;
+    font-weight: 600;
+}
+
+.checks {
+    line-height: 25px;
+    font-weight: 600;
+
+}
+
+.checks input {
+    appearance: none;
+    /* remove default browser property*/
+    border: 2px solid cyan;
+    width: 18px;
+    height: 18px;
+    transform: translateY(20%);
+    cursor: pointer;
+    border-radius: 0.35rem;
+}
+
+.checks input:checked {
+    background-color: rgba(0, 255, 255, 0.459);
+}
+
+.checks input:checked::after {
+    content: "✓";
+    position: absolute;
+    color: rgb(103, 222, 117);
+    font-size: 15px;
+    font-weight: 600;
+    position: absolute;
+    bottom: 1px;
+    left: 10%;
+    transform: translateY(10%);
+}
+
+.checks label {
+    letter-spacing: 1.5px;
+    line-height: 30px;
+}
+
+.slider {
+    appearance: none;
+    width: 100%;
+    height: 15px;
+    border-radius: 1rem;
+    margin: 20px 0;
+    background-image: linear-gradient(26deg, #412b2b 12%, #712ad5 100%);
+    cursor: pointer;
+    z-index: 1;
+    background-repeat: no-repeat;
+    background-color: linear-gradient(26deg, #412b2b 12%, #712ad5 100%);
+
+}
+
+.slider::-webkit-slider-thumb {
+    z-index: -1;
+    appearance: none;
+    height: 1.5rem;
+    width: 1.5rem;
+    border: 1px solid #dfe23c;
+    border-radius: 50%;
+    cursor: pointer;
+    margin-top: -3px;
+    transform: translateY(8%);
+    background-color: #dfe23c;
+    box-shadow: 0px 0px 13px 1px #dfe23c;
+    transition: all 100ms linear;
+
+
+}
+
+.slider:focus {
+    border: 2px solid yellow;
+}
+
+h1::selection,
+.container h1::selection {
+    color: black;
+    background-color: rgb(255, 255, 255);
+}
+
+.copyBtn {
+    background-color: transparent;
+    border: none;
+    outline: none;
+
+}
+
+.copyMsg{
+    left: -40%;
+    color: wheat;
+    position: absolute;
+    bottom: 114%;
+    transform: translate(-46px 4);
+    background-color: rgb(121, 123, 23);
+    border-radius: 1rem;
+    padding: 3px 5px;
+    display: none;
+    /* transition: all 1s ease-in; */
+}
+.active{
+    display: block;
+}

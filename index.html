@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kode+Mono:wght@400..700&display=swap" rel="stylesheet"> 
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container">
+        <h1>PASSWORD GENERATOR</h1>
+        <div class="display-container">
+            <input readonly placeholder="Password" class="display" data-passwordDisplay>
+
+            <!-- copy -->
+
+            <button class="copyBtn" data-copy-button>
+                <span class="copyMsg" data-copyMsg></span>
+                <img src="img/—Pngtree—vector copy icon_4162956.png" alt="" height="30px" width="30px"  data-copy>
+            </button>
+        </div>
+
+        <div class="input-container">
+            <div class="length-container">
+                <p>Password length</p>
+                <p data-lengthNumber>0</p>
+            </div>  
+            <!-- slider -->
+            <input class="slider" type="range" min="1" max="20" step="1" class="slider" data-lengthSlider>
+            
+
+            <!-- checkbox -->
+            <div class="checks">
+                <input type="checkbox" id="uppercase">
+                <label for="uppercase">Include Uppercase Letters</label>
+            </div>
+            <div class="checks">
+                <input type="checkbox" id="lowercase">
+                <label for="lowercase">Include Lowercase Letters</label>
+            </div>
+            <div class="checks">
+                <input type="checkbox" id="digits">
+                <label for="digits">Include digits</label>
+            </div>
+            <div class="checks">
+                <input type="checkbox" id="specialCharacters">
+                <label for="specialCharacters">Include special Characters</label>
+            </div>
+
+            <!-- strength check -->
+
+            <div class="strength-container">
+                <p>Strength</p>
+                <div data-indicator class="indicator"></div>
+            </div>
+
+            <!-- Generate password -->
+            <button class="generate-button">Generate</button>
+
+        </div>
+
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
